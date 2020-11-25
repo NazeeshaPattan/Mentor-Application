@@ -17,7 +17,7 @@ async function addMentor() {
             contact: MentorContact,
             students: []
         };
-        await fetch("https://mentorstudent.herokuapp.com/mentor", {
+        await fetch("https://mentor-student.herokuapp.com/mentor", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
