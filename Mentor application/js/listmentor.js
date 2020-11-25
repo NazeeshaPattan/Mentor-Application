@@ -4,7 +4,7 @@ getMentors()
 
 async function getMentors() {
     mentors.splice(0, mentors.length)
-    const res = await fetch('https://mentorstudent.herokuapp.com/mentor');
+    const res = await fetch('https://mentor-student.herokuapp.com/mentor');
     const response = await res.json();
     response.forEach(mentor => {
         mentors.push(mentor);    
