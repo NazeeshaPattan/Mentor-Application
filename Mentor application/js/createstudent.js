@@ -20,7 +20,7 @@ async function addStudent() {
             mentorAssigned: false,
             mentorName: "Not Assigned"
         };
-        await fetch("https://mentorstudent.herokuapp.com/student", {
+        await fetch("https://mentor-student.herokuapp.com/student", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
