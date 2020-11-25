@@ -19,7 +19,7 @@ async function getMentors() {
 
 async function getStudents() {
     students.splice(0, students.length)
-    const res = await fetch('https://mentorstudent.herokuapp.com/student');
+    const res = await fetch('https://mentor-student.herokuapp.com/student');
     const response = await res.json();
     response.forEach(student => {
         students.push(student);    
@@ -168,7 +168,7 @@ async function UpdateMentortoStudent() {
         studentName: selectedstudent,
         OldMentor: oldMentor
     }
-    await fetch('https://mentorstudent.herokuapp.com/mentor/UpdateMentor', {
+    await fetch('https://mentor-student.herokuapp.com/mentor/UpdateMentor', {
         method: 'PUT',
         body: JSON.stringify(data),
         headers: {
